@@ -2,26 +2,137 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Caipture — AI Pose Camera</title>
-<meta name="description" content="Caipture guides you into the perfect pose with live on-device pose matching.">
-<link rel="stylesheet" href="/style.css">
+<meta name="description" content="Tired of his terrible photos? Caipture puts a see-through pose on the camera, guides him joint by joint and takes the shot the moment you match.">
+<meta name="theme-color" content="#30111D">
+<meta property="og:title" content="Caipture — AI Pose Camera">
+<meta property="og:description" content="A see-through pose on the camera, live guidance, and a photo that takes itself.">
+<meta property="og:image" content="https://caipture.app/assets/s-ghost.webp">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/home.css">
 </head>
 <body>
-<div class="wrap">
-<header><a href="/"><span class="dot"></span>Caipture</a></header>
 
-<h1>Strike the pose. Nail the shot.</h1>
-<p class="hero">Caipture overlays a pose on your camera and guides you joint by joint until you match it — then takes the photo for you. Beach, city, landmarks, pools and the slopes.</p>
-<p class="hero">Everything runs on your iPhone. No accounts, no tracking.</p>
+<header class="nav">
+  <a class="brand" href="/" aria-label="Caipture home">
+    <img src="/assets/logo.png" alt="" width="36" height="36">
+    <span>Caipture</span>
+  </a>
+  <a class="store store--sm" href="#download" data-store>Download</a>
+</header>
 
-<div class="card">
-<strong>Support</strong><br>
-Questions, feedback or subscription help: <a href="mailto:support@caipture.app">support@caipture.app</a><br>
-Manage or cancel a subscription: iPhone Settings › your name › Subscriptions.
-</div>
+<main>
 
-<footer><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="mailto:support@caipture.app">Support</a></footer>
-</div>
+<!-- Hero -->
+<section class="hero">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero__copy">
+    <p class="eyebrow l1">AI pose camera for iPhone</p>
+    <h1 class="l2">Tired of his <span class="grad">terrible photos?</span></h1>
+    <p class="lead l3">Caipture shows whoever holds the phone exactly how to shoot you — a see-through pose on the camera, live guidance, and a shot that takes itself.</p>
+    <div class="cta l4">
+      <a class="store" href="#download" data-store>
+        <span class="store__small">Download on the</span>
+        <span class="store__big">App Store</span>
+      </a>
+      <span class="note">Free to start · 69 poses</span>
+    </div>
+  </div>
+  <div class="hero__art l5" aria-hidden="true">
+    <figure class="polaroid">
+      <img src="/assets/hero-bad.webp" alt="" width="520" height="780">
+      <figcaption>His usual photo</figcaption>
+    </figure>
+    <div class="phone float">
+      <img src="/assets/hero-good.webp" alt="" width="720" height="1290">
+      <span class="chip chip--coral">✦ With a Caipture pose</span>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="feature" id="how">
+  <div class="feature__text r">
+    <p class="eyebrow">01 · The pose shows up</p>
+    <h2>He just points.<br>The pose appears.</h2>
+    <p>A see-through photo of the pose sits right on the camera, so anyone can see where you should stand and how — no photography skills needed.</p>
+  </div>
+  <div class="phone r tilt"><img src="/assets/s-ghost.webp" alt="Camera with a semi-transparent pose over a Santorini street" loading="lazy" width="720" height="1565"></div>
+</section>
+
+<section class="feature feature--flip">
+  <div class="feature__text r">
+    <p class="eyebrow">02 · Auto-capture</p>
+    <h2>Snaps itself when you nail it.</h2>
+    <p>The pose fits whoever is in frame. Match it and Caipture says <em>Perfect</em>, counts down and takes the photo — no timer, no running back and forth.</p>
+  </div>
+  <div class="phone r tilt"><img src="/assets/s-countdown.webp" alt="Pose matched with a 3-second countdown" loading="lazy" width="720" height="1565"></div>
+</section>
+
+<section class="bento">
+  <article class="card card--tall r">
+    <div class="card__text">
+      <p class="eyebrow">03 · Live skeleton</p>
+      <h3>Shows exactly what to fix</h3>
+      <p>Green joints are spot on. Yellow and red show which arm or leg to move.</p>
+    </div>
+    <div class="phone phone--card"><img src="/assets/s-skeleton.webp" alt="Live skeleton with colour-coded joints" loading="lazy" width="720" height="1565"></div>
+  </article>
+  <article class="card card--tall r">
+    <div class="card__text">
+      <p class="eyebrow">04 · AI Smart Mode</p>
+      <h3>Not sure how to pose?</h3>
+      <p>Caipture sees how you're standing and picks the closest pose from the library.</p>
+    </div>
+    <div class="phone phone--card"><img src="/assets/s-ai.webp" alt="AI Smart Mode suggesting a pose" loading="lazy" width="720" height="1565"></div>
+  </article>
+  <article class="card card--wide r">
+    <div class="stat"><b data-count="69">69</b><span>poses</span></div>
+    <div class="stat"><b data-count="5">5</b><span>collections</span></div>
+    <div class="stat"><b>3·2·1</b><span>hands-free shot</span></div>
+    <div class="stat"><b>0</b><span>photos leave your iPhone</span></div>
+  </article>
+</section>
+
+<!-- Poses marquee -->
+<section class="poses">
+  <div class="poses__head r">
+    <p class="eyebrow">05 · Poses for every trip</p>
+    <h2>Beach, city, landmarks, pools, the slopes</h2>
+    <p>Mostly vertical, made for your feed — and new collections keep coming.</p>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__row">
+      <img src="/assets/poses/beach_stand_1.webp" alt="" loading="lazy"><img src="/assets/poses/city_stand_1.webp" alt="" loading="lazy"><img src="/assets/poses/landmarks_stand_1.webp" alt="" loading="lazy"><img src="/assets/poses/pool_stand_2.webp" alt="" loading="lazy"><img src="/assets/poses/ski_stand_1.webp" alt="" loading="lazy"><img src="/assets/poses/city_walk_1.webp" alt="" loading="lazy"><img src="/assets/poses/landmarks_sit_1.webp" alt="" loading="lazy"><img src="/assets/poses/beach_sit_1.webp" alt="" loading="lazy"><img src="/assets/poses/pool_walk_1.webp" alt="" loading="lazy">
+    </div>
+    <div class="marquee__row marquee__row--rev">
+      <img src="/assets/poses/ski_sit_1.webp" alt="" loading="lazy"><img src="/assets/poses/city_stand_4.webp" alt="" loading="lazy"><img src="/assets/poses/landmarks_stand_3.webp" alt="" loading="lazy"><img src="/assets/poses/beach_lie_2.webp" alt="" loading="lazy"><img src="/assets/poses/pool_sit_1.webp" alt="" loading="lazy"><img src="/assets/poses/ski_stand_3.webp" alt="" loading="lazy"><img src="/assets/poses/city_sit_2.webp" alt="" loading="lazy"><img src="/assets/poses/landmarks_walk_1.webp" alt="" loading="lazy"><img src="/assets/poses/pool_stand_1.webp" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Privacy + CTA -->
+<section class="closing" id="download">
+  <div class="closing__card r">
+    <img class="closing__logo" src="/assets/logo.png" alt="" width="96" height="96">
+    <h2>Private by design</h2>
+    <p>Pose detection runs entirely on your iPhone. No account, no tracking — your camera and photos never leave your device.</p>
+    <a class="store" href="#download" data-store>
+      <span class="store__small">Download on the</span>
+      <span class="store__big">App Store</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span>© 2026 Samui Robotics Company Limited</span>
+  <nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:support@caipture.app">Support</a></nav>
+</footer>
+
+<script src="/home.js" defer></script>
 </body>
 </html>
