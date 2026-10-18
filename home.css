@@ -31,7 +31,11 @@ p{margin:0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.02em}
 .brand img{width:36px;height:36px;border-radius:9px}
 
-/* App Store button (swap for Apple's official badge before launch) */
+/* Apple's official App Store badge (unaltered; min height 40 px) */
+.badge{display:inline-block;line-height:0;transition:transform .3s var(--ease),filter .3s var(--ease)}
+.badge img{height:60px;width:auto}
+.badge:hover{transform:translateY(-2px);filter:drop-shadow(0 10px 24px rgba(255,107,97,.3))}
+
 .store{display:inline-flex;flex-direction:column;justify-content:center;gap:0;min-width:178px;height:58px;padding:0 22px;border-radius:16px;
   background:#000;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .store:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,107,97,.25)}
