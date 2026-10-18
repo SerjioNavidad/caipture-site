@@ -42,16 +42,23 @@ p{margin:0}
 
 /* Hero */
 .hero{position:relative;min-height:min(100svh,980px);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(24px,5vw,80px);
-  padding:120px clamp(20px,6vw,96px) 72px;isolation:isolate;overflow:hidden}
-.aurora{position:absolute;inset:-20% -20% 0;z-index:-1;filter:blur(90px);opacity:.75;
-  mask-image:linear-gradient(#000 55%,transparent);-webkit-mask-image:linear-gradient(#000 55%,transparent)}
-.aurora i{position:absolute;border-radius:50%;mix-blend-mode:screen}
-.aurora i:nth-child(1){width:52vw;height:52vw;left:-8vw;top:6vh;background:#C2405A;animation:drift1 22s ease-in-out infinite alternate}
-.aurora i:nth-child(2){width:42vw;height:42vw;right:-6vw;top:-6vh;background:#E07A3A;animation:drift2 26s ease-in-out infinite alternate}
-.aurora i:nth-child(3){width:36vw;height:36vw;left:30vw;bottom:-14vh;background:#7B3FA8;animation:drift3 30s ease-in-out infinite alternate}
-@keyframes drift1{to{transform:translate(12vw,10vh) scale(1.15)}}
-@keyframes drift2{to{transform:translate(-14vw,14vh) scale(.9)}}
-@keyframes drift3{to{transform:translate(10vw,-12vh) scale(1.2)}}
+  padding:120px clamp(20px,6vw,96px) 72px}
+/* Page-wide glow blobs: soft radial gradients (no blur filter — cheap on long pages) */
+body{position:relative}
+.blobs{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blobs i{position:absolute;width:var(--s);height:var(--s);left:var(--x);top:var(--y);border-radius:50%;
+  background:radial-gradient(closest-side,var(--c),transparent);opacity:.55;animation:drift var(--d,28s) ease-in-out infinite alternate}
+.blobs i:nth-child(1){--c:#D2425C;--s:1100px;--x:-380px;--y:-260px;--d:24s}
+.blobs i:nth-child(2){--c:#E8803C;--s:900px;--x:58%;--y:-180px;--d:30s}
+.blobs i:nth-child(3){--c:#8A44B8;--s:1000px;--x:28%;--y:12%;--d:34s}
+.blobs i:nth-child(4){--c:#D2425C;--s:900px;--x:-300px;--y:26%;--d:28s}
+.blobs i:nth-child(5){--c:#E8803C;--s:950px;--x:60%;--y:40%;--d:32s}
+.blobs i:nth-child(6){--c:#8A44B8;--s:1000px;--x:-260px;--y:55%;--d:36s}
+.blobs i:nth-child(7){--c:#C2405A;--s:1000px;--x:50%;--y:68%;--d:26s}
+.blobs i:nth-child(8){--c:#E8803C;--s:900px;--x:10%;--y:84%;--d:30s}
+@keyframes drift{to{transform:translate(8vw,6vh) scale(1.12)}}
+.blobs i:nth-child(even){animation-name:drift2}
+@keyframes drift2{to{transform:translate(-9vw,-5vh) scale(.92)}}
 .lead{font-size:clamp(18px,1.6vw,21px);color:var(--soft);max-width:34em;margin-top:22px}
 .cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:34px}
 .note{color:var(--mute);font-size:15px}
